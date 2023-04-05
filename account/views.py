@@ -12,7 +12,7 @@ from django.contrib.auth import views as auth_views
 
 
 def home(request):
-    return render(request, "account/home.html", {})
+    return render(request, "home.html", {})
 
 
 def register(request):
@@ -29,4 +29,4 @@ def register(request):
             return redirect('home')
     else:
         form = UserCreationForm()
-    return render(request, 'account/register.html', {'form': form})
+    return render(request, 'account/newregister.html', {'form': form})

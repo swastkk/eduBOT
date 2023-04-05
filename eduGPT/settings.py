@@ -31,12 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+    'account',
+    'bookbuddy',
+    'youtubeplus',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_icons',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +59,8 @@ ROOT_URLCONF = 'eduGPT.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 os.path.join(BASE_DIR, "templates", "jazzmin")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,8 +124,47 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DJANGO_ICONS = {
+    "ICONS": {
+        "icon": {"name": "fa-solid fa-lock fa-beat fa-lg"},
+    },
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "flatly",
+    "navbar": "navbar-dark",
+    "dark_mode_theme": "darkly",
+}
+JAZZMIN_SETTINGS = {
+    # title of the window (Will default to current_admin_site.site_title)
+    "site_title": "eduGPT",
+    # Title on the login screen (19 chars max) (will default to current_admin_site.site_header)
+    "site_header": "",
+    # Title on the brand (19 chars max) (will default to current_admin_site.site_header)
+    "site_brand": "eduGPT",
+    "welcome_sign": "Welcome to the admin dashboard. Login to take incharge.",
+    # Copyright on the footer
+    "copyright": "Access : Denied",
+    "changeform_format": "horizontal_tabs",
+    # "site_logo": "",
+    # "site_logo_classes": "img-circle",
+    "topmenu_links": [
+        {
+            "name": "Home",
+            "url": "/",
+            "new_window": True
+        },
+    ],
+}
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
