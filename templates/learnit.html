@@ -1,9 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>URL Submission Form</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/learnit.css' %}">
   </head>
+  <script src="{% static 'js/learnit.js' %}"></script>
   <body>
     <div class="form-container">
       <form>
@@ -12,10 +15,6 @@
         <input type="submit" value="Submit">
       </form>
     </div>
-
-
-  
-
     <b>Chrome v111 on Android redirect problem.</b>
     <small>Don't try it in the desktop browser.</small>
     <div class="grid">
@@ -74,6 +73,5 @@
       </div>
     
     </div>
-    <script src="main.js"></script>
   </body>
 </html>
