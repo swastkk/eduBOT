@@ -1,15 +1,21 @@
+# importing required modules
+from sumy.summarizers.luhn import LuhnSummarizer
+from sumy.nlp.stemmers import Stemmer
+from sumy.summarizers.lsa import LsaSummarizer as Summarizer
 from PyPDF2 import PdfReader
-from gptKaam import GPT_3, load_dotenv
-import os
 from gtts import gTTS
 from io import BytesIO
-from sumy.summarizers.luhn import LuhnSummarizer
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
+# download the model in library
+from pydub import AudioSegment
+from pydub.playback import play
 
-#  can modify to get detail by page
-load_dotenv()
-gpt_3 = GPT_3(os.getenv('OPENAI_API_KEY'))
+def playAudio(audioBytes):
+    audioBytes.seek(0) # move the BytesIO object pointer to the start
+    audio = AudioSegment.from_file(audioBytes, format='mp3')
+    play(audio)
+
 
 total_content = ""
 
@@ -26,17 +32,29 @@ def getText(file_path, total_content):
     return val, total_content
 
 
-val, text = getText("know-india-booklet.pdf", "")
+val, text = getText("gptBook.pdf", "")
+summary=" "
 parser = PlaintextParser(text, Tokenizer('english'))
 summarizer_1 = LuhnSummarizer()
 summary_1 = summarizer_1(parser.document, 10)
-print(summary_1)
 for sentence in summary_1:
-    print(sentence)
+#     print(sentence)
+    summary += str(sentence)
+
+
+print("printing summary")
+print(summary)
+
 
 
 def sumToAudio(summary):
-    audio = gTTS(summary)
+    audio = gTTS(summary )
     af = BytesIO()
     audio.write_to_fp(af)
     return af
+
+audio = sumToAudio(summary )
+
+# print(type(audio))
+print("playing audio")
+playAudio(audio)
