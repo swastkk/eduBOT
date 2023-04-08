@@ -30,6 +30,7 @@ val, text = getText("know-india-booklet.pdf", "")
 parser = PlaintextParser(text, Tokenizer('english'))
 summarizer_1 = LuhnSummarizer()
 summary_1 = summarizer_1(parser.document, 10)
+print(summary_1)
 for sentence in summary_1:
     print(sentence)
 
