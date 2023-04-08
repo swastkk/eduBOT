@@ -60,8 +60,8 @@ nav
 	left: -16em;
 	top: 0;
 	bottom: 0;
-	background-color: #393939;
-	border-right: 50px solid #3491b5;
+	background-color: #434c50;
+	border-right: 50px solid #434c50;
 	/* box-shadow: 4px 0 5px rgba(0,0,0,0.2); */
 	z-index: 1;
 	cursor: pointer;
@@ -77,7 +77,7 @@ nav:after
 	top: 50%;
 	border-width: 15px 10px;
 	border-style: solid;
-	border-color: transparent transparent transparent #0c5dce;
+	border-color: transparent transparent transparent #fff;
 }
 
 nav ul
@@ -177,13 +177,16 @@ picture {
   }
   
   .container {
-    flex: 0 1 760px;
-      padding: 3rem 3rem;
-    
+    display: flex;
+    padding: 3rem 3rem;
     justify-content: center;
     max-width: 760px;
   }
-  
+   .aboutFeature {
+    flex: 0 1 760px;
+    padding: 3rem 3rem;
+    justify-content: center;
+    }
   input {
     border-top-style: hidden;
     border-right-style: hidden;
@@ -212,9 +215,9 @@ picture {
     padding: 3em;
     text-align: left;
     color: #fff;
-    height: 80vh;
+    height: 100vh;
     position: relative;
-    background: linear-gradient(45deg, #0f248a 0%, #6b0f8a 100%);
+    background: linear-gradient(45deg, #32313a 0%, #000000 100%);
     overflow: hidden;
   }
   .hero .buttons > * {
@@ -234,9 +237,8 @@ picture {
     overflow: visible;
   }
   .bgImage.noise {
-    background-image: url(https://fixthephoto.com/images/content/photoshop-film-grain-overlay-281611833342.jpg);
-    background-size: cover;
-    mix-blend-mode: screen;
+    background-image: url(../mainwall.webp);
+    background-size: fill;
     opacity: 0.1;
   }
   .bgImage.fog {
@@ -395,3 +397,5 @@ picture {
       padding: 6vw;
     }
   }
+
+

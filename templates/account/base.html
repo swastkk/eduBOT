@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,6 +8,19 @@
     <title>{% block head_title %}{% endblock %}</title>
     {% block extra_head %}
     {% endblock %}
+    <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous"> 
+        <link rel="stylesheet" href="{% static 'css/account.css' %}">
+
   </head>
   <body>
     {% block body %}
@@ -23,16 +37,16 @@
     {% endif %}
 
     <div>
-      <strong>{% trans "Menu:" %}</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">{% trans "Change E-mail" %}</a></li>
-        <li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li>
-        <li><a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
-        {% endif %}
-      </ul>
+      <!-- <strong>{% trans "Menu:" %}</strong> -->
+      <!-- <ul> -->
+      <!--   {% if user.is_authenticated %} -->
+      <!--   <li><a href="{% url 'account_email' %}">{% trans "Change E-mail" %}</a></li> -->
+      <!--   <li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li> -->
+      <!--   {% else %} -->
+      <!--   <li><a href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li> -->
+      <!--   <li><a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li> -->
+      <!--   {% endif %} -->
+      <!-- </ul> -->
     </div>
     {% block content %}
     {% endblock %}
