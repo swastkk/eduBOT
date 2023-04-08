@@ -1,9 +1,4 @@
-import cv2
 import openai
-# import easyocr
-# import matplotlib.pyplot as plt
-# from torch.cuda import is_available
-from dotenv import load_dotenv
 
 
 class GPT_3:
