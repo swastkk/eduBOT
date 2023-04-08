@@ -20,12 +20,14 @@ from django.conf import settings
 from django.views.static import serve
 from bookbuddy.views import bookbuddy
 from youtubeplus.views import youtubeplus
+from learnit.views import learnit
 
 urlpatterns = [
     path('', include('main.urls')),
     path('admin/', admin.site.urls),
     path('bookbuddy/', bookbuddy),
     path('youtubeplus/', youtubeplus),
+    path('learnit', learnit),
     path('accounts/', include('allauth.urls')),
     re_path(r'^media/(?P<path>.*)$', serve,
             {'document_root': settings.MEDIA_ROOT}),

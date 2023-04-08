@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'jazzmin',
     'bookbuddy',
     'youtubeplus',
+    'learnit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -139,6 +140,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 # Default primary key field type

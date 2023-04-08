@@ -177,13 +177,16 @@ picture {
   }
   
   .container {
-    flex: 0 1 760px;
-      padding: 3rem 3rem;
-    
+    display: flex;
+    padding: 3rem 3rem;
     justify-content: center;
     max-width: 760px;
   }
-  
+   .aboutFeature {
+    flex: 0 1 760px;
+    padding: 3rem 3rem;
+    justify-content: center;
+    }
   input {
     border-top-style: hidden;
     border-right-style: hidden;
@@ -214,7 +217,7 @@ picture {
     color: #fff;
     height: 80vh;
     position: relative;
-    background: linear-gradient(45deg, #0f248a 0%, #6b0f8a 100%);
+    background: linear-gradient(45deg, #000000 0%, #ffffff 100%);
     overflow: hidden;
   }
   .hero .buttons > * {
@@ -234,9 +237,8 @@ picture {
     overflow: visible;
   }
   .bgImage.noise {
-    background-image: url(https://fixthephoto.com/images/content/photoshop-film-grain-overlay-281611833342.jpg);
-    background-size: cover;
-    mix-blend-mode: screen;
+    background-image: url(../mainwall.webp);
+    background-size: fill;
     opacity: 0.1;
   }
   .bgImage.fog {
@@ -395,3 +397,5 @@ picture {
       padding: 6vw;
     }
   }
+
+
