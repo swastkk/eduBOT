@@ -49,12 +49,23 @@
 	<div class="container">
       <img src="{% static 'logo.webp' %}">
 		<h1>YouTube Summary</h1>
-		<form>
-			<input type="text" id="youtube-link" placeholder="Enter YouTube link">
-			<input type="submit" value="Summarize">
+		<form method='post'>
+                    {% csrf_token %}
+			<!-- <input type="text" id="youtube-link" placeholder="Enter YouTube link"> -->
+                    {{form}} <input type="submit" value="Summarize">
 		</form>
-		<textarea id="output" readonly></textarea>
+		<!-- <textarea id="output" readonly></textarea> -->
 	</div>
+<div>
+     {% block summary %}
+     
+     {% endblock summary %}
+<hr>
+     {% block translated %}
+     
+     {% endblock translated %}
+
+</div>
 
 	<script>
 		// JavaScript code for summarizing YouTube videos goes here

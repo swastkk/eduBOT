@@ -1,39 +1,45 @@
-import pytube, whisper
-
-from PIL import Image
-from io import BytesIO
-from quiz import app
-
+import pytube
+import whisper
+import os
 from sumy.summarizers.luhn import LuhnSummarizer
-from sumy.nlp.stemmers import Stemmer
-from sumy.summarizers.lsa import LsaSummarizer as Summarizer
+# from sumy.nlp.stemmers import Stemmer
+# from sumy.summarizers.lsa import LsaSummarizer as Summarizer
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
+from gptKaam import *
+
+gpt_3 = GPT_3(os.getenv('OPENAI_API_KEY'))
+
 
 model = whisper.load_model("base")
+
 
 def urlToText(url):
     data = pytube.YouTube(url)
     audioF = data.streams.get_audio_only()
     name = audioF.download()
-            
-    model = whisper.load_model("base")
 
-    # timeStamps = model.
+    model = whisper.load_model("base")
     audio_file = open(name, 'rb')
     audio_bytes = audio_file.read()
     text = model.transcribe(name)
     valuable = text['text']
 
-    return audio_bytes, valuable 
+    return audio_bytes, valuable
 
 
-# print("url se text trying ")
-audioF , text = urlToText("https://youtu.be/J-nURWdlP_o")
-print(text)
-# print("url se text donme")
+url = input("yt url")
 
-summary=" "
+audioF, text = urlToText(url)
+
+# print(text)
+print("url to text extracted")
+
+# print()
+
+summary = " "
+
+print("summary is being calculated")
 
 parser = PlaintextParser(text, Tokenizer('english'))
 summarizer_1 = LuhnSummarizer()
@@ -42,5 +48,9 @@ for sentence in summary_1:
     summary += str(sentence)
 
 
+lang = input("translate the video into which language?")
+translated = gpt_3.translate(text, lang)
 
-print(summary)
+
+print(translated)
+
