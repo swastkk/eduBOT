@@ -1,24 +1,12 @@
-
-<!-- <body>
-     <form method="POST" class="post-form" enctype="multipart/form-data">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit" class="save btn btn-default">Save</button>
-     </form>
-</body>
--->
-{% load static %} 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0032)http://127.0.0.1:8003/bookbuddy/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Buddy</title>
-    <link rel="stylesheet" href="{% static 'css/bookbuddy.css' %}">
-</head>
-  <script src="{% static 'js/bookbuddy.js' %}"></script>
-<style>
+    <link rel="stylesheet" href="./Book Buddy_files/bookbuddy.css">
+<script src="./Book Buddy_files/bookbuddy.js"></script><style>
   *{
     content-overflow: hidden;
   }
@@ -61,37 +49,39 @@
   .section-one{
     padding-top: 135px;
   }
-</style>
+</style></head>
+  
+
 <body>
 
       <nav>
         <div class="logo">
-        <a href='/'><img src="{% static 'logo.webp' %}" alt="Logo"></a>
+        <a href="http://127.0.0.1:8003/"><img src="./Book Buddy_files/logo.webp" alt="Logo"></a>
         </div>
         <ul class="nav-links">
-          <li><a href="#" target: "_blank";>Book Buddy</a></li>
-          <li><a href="../youtubeplus">YouTube plus</a></li>
-          <li><a href="../learnit">Learn it</a></li>
-          <li><a href="#">Profile</a></li>
+          <li><a href="http://127.0.0.1:8003/bookbuddy/#" target:="" "_blank";="">Book Buddy</a></li>
+          <li><a href="http://127.0.0.1:8003/youtubeplus">YouTube plus</a></li>
+          <li><a href="http://127.0.0.1:8003/learnit">Learn it</a></li>
+          <li><a href="http://127.0.0.1:8003/bookbuddy/#">Profile</a></li>
         </ul>
       </nav>
           
        <div><h2 style="text-align:center; margin-top:120px; font-size: 35px;">Book Buddy</h2>
 </div>
         <section class="section-one">
-          <form class="pastetext" action="text">
+          <form class="pastetext" action="http://127.0.0.1:8003/bookbuddy/text">
               <textarea class="textarea" name="pastetext" id="textarea" placeholder="Paste your text" cols="30" rows="35"> </textarea>
-              <a href="" class="submit-btn">Submit</a> 
+              <a href="http://127.0.0.1:8003/bookbuddy/" class="submit-btn">Submit</a> 
           </form>
 
           
 
-<form class="form-container" enctype='multipart/form-data'>
+<form class="form-container" enctype="multipart/form-data">
    <div class="upload-files-container">
         <div class="drag-file-area">
              <span class="material-icons-outlined upload-icon"> file_upload </span>
-             <h3 class="dynamic-message"> Drag & drop any file here </h3>
-             <label class="label"> or <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">Browse file</span> <span>from device</span> </span> </label>
+             <h3 class="dynamic-message"> Drag &amp; drop any file here </h3>
+             <label class="label"> or <span class="browse-files"> <input type="file" class="default-file-input"> <span class="browse-files-text">Browse file</span> <span>from device</span> </span> </label>
         </div>
         <span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
         <div class="file-block">
@@ -110,27 +100,28 @@
 
     <div class="download">
        
-      <a href="#" class="btn-slide">
+      <a href="http://127.0.0.1:8003/bookbuddy/#" class="btn-slide">
           <span class="circle"><i class="fa fa-rocket"></i></span>
           <span class="title">Audio</span>
           <span class="title-hover">Click here</span>
         </a>
-        <a href="#" class="btn-slide2">
+        <a href="http://127.0.0.1:8003/bookbuddy/#" class="btn-slide2">
           <span class="circle2"><i class="fa fa-download"></i></span>
           <span class="title2">Download</span>
           <span class="title-hover2">Click here</span>
         </a>
         </div>
-    </div>
+    
   
       
       <section class="section-ten">
         <h3>We'd love to hear from you.</h3>
-        <a href="" class="Touch-btn">Get In Touch</a>
+        <a href="http://127.0.0.1:8003/bookbuddy/" class="Touch-btn">Get In Touch</a>
       </section>
       
-      <script src="main.js"></script>
+      <script src="./Book Buddy_files/main.js"></script>
       
-  </body>
-</html>
+  
 
+
+</body></html>

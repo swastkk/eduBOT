@@ -291,7 +291,7 @@ picture {
   .miniReview .productImage {
     height: 200px;
     width: 200px;
-    background-image: url();
+    background-image: url({% static 'Book.webp'%});
     border-radius: 0.5rem;
     margin-top: 0.5rem;
   }
