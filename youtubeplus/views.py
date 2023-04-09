@@ -64,7 +64,7 @@ def youtubeplus(request):
             summary_1 = summarizer_1(parser.document, lines)
             for sentence in summary_1:
                 summary += str(sentence)
-            translated = gpt_3.translate(text, lang)
+            translated = gpt_3.translate(summary, lang)
             ctx = {
                 'translated': translated,
                 'summary': summary,

@@ -30,6 +30,7 @@ def learnit(request):
                 'resource': resource,
                 'desc': result,
                 'linebreaksbr': linebreaksbr,
+                'form': form,
 
             }
             return render(request, 'learnit_block.html', ctx)

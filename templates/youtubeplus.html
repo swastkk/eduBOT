@@ -169,7 +169,6 @@ nav {
 	</style>
 </head>
 <body>
-<<<<<<< HEAD
 	<div class="container">
       <img src="{% static 'logo.webp' %}">
 		<h1>YouTube Summary</h1>
@@ -190,34 +189,5 @@ nav {
      {% endblock translated %}
 
 </div>
-	<div class="navbar">
-      <div class="logo">
-        <a href='/'><img src="{% static 'logo.webp' %}" alt="Logo"></a>
-       </div>
-    <ul class="nav-links">
-          <li><a href="../bookbuddy" target: "_blank";>Book Buddy</a></li>
-          <li><a href="">YouTube plus</a></li>
-          <li><a href="../learnit">Learn it</a></li>
-          <li><a href="#">Profile</a></li>
-    </ul>
-	</div>
-  <div class="container">
-		<form method='post'>
-                    {% csrf_token %}
-			<!-- <input type="text" id="youtube-link" placeholder="Enter YouTube link"> -->
-                    {{form.as_p}} <input type="submit" value="Summarize">
-		</form>
-      </div>  
-    </form>
-
-    <!-- <div class="output"> -->
-    <!--   <label for="output">Output</label> -->
-    <!--   <p id="output">Output goes here</p> -->
-    <!--   <div class="btns"> -->
-    <!--     <button  id="copy-button">Download</button> -->
-    <!--   <button id="reset-button">Convert to audio</button> -->
-    <!--   </div> -->
-    </div>
-  </div>
 </body>
 </html>
