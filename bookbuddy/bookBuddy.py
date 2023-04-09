@@ -1,8 +1,10 @@
 # importing required modules
+import os
+import tempfile
+from django.http import FileResponse
 from PyPDF2 import PdfReader
 from gtts import gTTS
 from io import BytesIO
-
 
 # def playAudio(audioBytes):
 #     audioBytes.seek(0)  # move the BytesIO object pointer to the start
@@ -25,8 +27,10 @@ def getText(file_path, total_content):
     return val, total_content
 
 
+
 def sumToAudio(summary):
     audio = gTTS(summary)
     af = BytesIO()
     audio.write_to_fp(af)
-    return af
+    return os.path.abspath(af)
+    # return af

@@ -1,91 +1,15 @@
 
-<!-- <body>
+<body>
      <form method="POST" class="post-form" enctype="multipart/form-data">
           {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit" class="save btn btn-default">Save</button>
+     {{form}}
+          <button type="submit" class="save btn btn-default">Submit</button>
      </form>
+<br>
+          <hr>
+{% block audio %}
+          {% endblock audio %}
+
+{% block summary %}
+{% endblock summary %}
 </body>
--->
-{% load static %} 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Buddy</title>
-    <link rel="stylesheet" href="{% static 'css/bookbuddy.css' %}">
-</head>
-  <script src="{% static 'js/bookbuddy.js' %}"></script>
-
-<body>
-    <body>
-        <header>
-          <h1 class="logo">BOOK BUDDY</h1>
-
-          <input style="display:none;" type="checkbox" class="nav-toggle" id="nav-toggle">
-         
-          <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-          </label>
-        </header>
-        
-       
-        
-        <section class="section-one">
-          <form class="pastetext" action="text">
-              <textarea class="textarea" name="pastetext" id="textarea" placeholder="Paste your text" cols="30" rows="35"> </textarea>
-              <a href="" class="submit-btn">Submit</a> 
-          </form>
-
-          
-
-<form class="form-container" enctype='multipart/form-data'>
-   <div class="upload-files-container">
-        <div class="drag-file-area">
-             <span class="material-icons-outlined upload-icon"> file_upload </span>
-             <h3 class="dynamic-message"> Drag & drop any file here </h3>
-             <label class="label"> or <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">Browse file</span> <span>from device</span> </span> </label>
-        </div>
-        <span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
-        <div class="file-block">
-             <div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
-             <span class="material-icons remove-file-icon">delete</span>
-             <div class="progress-bar"> </div>
-        </div>
-        <button type="button" class="upload-button"> Upload </button>
-   </div>
-</form>
-                
-      </section>
-      <section class="output">
-          <h2 style="text-align:center">this is output area  </h2>
-      </section>
-
-    <div class="download">
-       
-      <a href="#" class="btn-slide">
-          <span class="circle"><i class="fa fa-rocket"></i></span>
-          <span class="title">Audio</span>
-          <span class="title-hover">Click here</span>
-        </a>
-        <a href="#" class="btn-slide2">
-          <span class="circle2"><i class="fa fa-download"></i></span>
-          <span class="title2">Download</span>
-          <span class="title-hover2">Click here</span>
-        </a>
-        </div>
-    </div>
-  
-      
-      <section class="section-ten">
-        <h3>We'd love to hear from you.</h3>
-        <a href="" class="Touch-btn">Get In Touch</a>
-      </section>
-      
-      <script src="main.js"></script>
-      
-  </body>
-</html>
-
