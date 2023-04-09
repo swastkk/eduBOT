@@ -44,3 +44,11 @@ for sentence in summary_1:
 
 
 print(summary)
+
+
+question = input("question dedo : ")
+context = summary 
+qna_answer = gpt_3.qna(question , summary)
+
+
+# print(qna_answer)
