@@ -1,15 +1,13 @@
-
-<body>
      <form method="POST" class="post-form" enctype="multipart/form-data">
           {% csrf_token %}
-     {{form}}
+          {{form}}
           <button type="submit" class="save btn btn-default">Submit</button>
      </form>
-<br>
-          <hr>
-{% block audio %}
-          {% endblock audio %}
+     <br>
+     <hr>
+     {% block audio %}
 
-{% block summary %}
-{% endblock summary %}
-</body>
+     {% endblock audio %}
+
+     {% block summary %}
+     {% endblock summary %}
