@@ -169,6 +169,27 @@ nav {
 	</style>
 </head>
 <body>
+<<<<<<< HEAD
+	<div class="container">
+      <img src="{% static 'logo.webp' %}">
+		<h1>YouTube Summary</h1>
+		<form method='post'>
+                    {% csrf_token %}
+			<!-- <input type="text" id="youtube-link" placeholder="Enter YouTube link"> -->
+                    {{form}} <input type="submit" value="Summarize">
+		</form>
+		<!-- <textarea id="output" readonly></textarea> -->
+	</div>
+<div>
+     {% block summary %}
+     
+     {% endblock summary %}
+<hr>
+     {% block translated %}
+     
+     {% endblock translated %}
+
+</div>
 	<div class="navbar">
       <div class="logo">
         <a href='/'><img src="{% static 'logo.webp' %}" alt="Logo"></a>
@@ -181,22 +202,21 @@ nav {
     </ul>
 	</div>
   <div class="container">
-    <form>
-      <label for="link">Paste your Youtube link below</label>
-      <textarea id="link" name="link" placeholder="https://example.com"></textarea>
-      <div class="btns">
-        <button type="submit">Submit</button>
-      <button type="submit">Translate</button>
+		<form method='post'>
+                    {% csrf_token %}
+			<!-- <input type="text" id="youtube-link" placeholder="Enter YouTube link"> -->
+                    {{form.as_p}} <input type="submit" value="Summarize">
+		</form>
       </div>  
     </form>
 
-    <div class="output">
-      <label for="output">Output</label>
-      <p id="output">Output goes here</p>
-      <div class="btns">
-        <button  id="copy-button">Download</button>
-      <button id="reset-button">Convert to audio</button>
-      </div>
+    <!-- <div class="output"> -->
+    <!--   <label for="output">Output</label> -->
+    <!--   <p id="output">Output goes here</p> -->
+    <!--   <div class="btns"> -->
+    <!--     <button  id="copy-button">Download</button> -->
+    <!--   <button id="reset-button">Convert to audio</button> -->
+    <!--   </div> -->
     </div>
   </div>
 </body>
