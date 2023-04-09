@@ -32,9 +32,8 @@ class GPT_3:
         prompt = f'Provide script to create a short and crisp video to explain about : {text}'
         return self.prediction(prompt=prompt)
 
-    def resources(self, text):
-        prompt = f'Tell me resources to learn about {text} in the form of a list of one yt video , 1 book , 1 article , 1 podcast'
-
+    def resources2(self, text  ):
+        prompt = f'Tell me resources to learn about {text} in the form of a list with numbering '
         return self.prediction(prompt=prompt)
 
     def summarize(self, text, num=None):
