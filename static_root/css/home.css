@@ -291,7 +291,7 @@ picture {
   .miniReview .productImage {
     height: 200px;
     width: 200px;
-    background: linear-gradient(45deg, #0f248a 0%, #6b0f8a 100%);
+    background-image: url();
     border-radius: 0.5rem;
     margin-top: 0.5rem;
   }

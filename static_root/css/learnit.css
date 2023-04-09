@@ -93,8 +93,12 @@
 .title{
   font-size: 10px;
 }
-
+/* Nav bar css */
 nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,4 +126,7 @@ nav {
 .nav-links a {
   color: #fff;
   text-decoration: none;
+}
+.nav-links a:hover {
+  color: #ccc;
 }
