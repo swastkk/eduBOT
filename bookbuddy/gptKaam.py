@@ -63,3 +63,7 @@ class GPT_3:
         prompt = f'please make a MCQ quiz of 5 question related to the following text with correct options in the end !\n\n{text}'
         # time.sleep(1)
         return self.prediction(prompt=prompt)
+    
+    def qna(self , question , context):
+        prompt = f'The question is {question} answer this on the basis of this text: {context}'
+        return self.prediction(prompt = prompt)
