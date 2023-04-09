@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter</title>
-    <link rel="stylesheet" href="static/css/enterpage.css">
+    <title>Enter eduBOT</title>
+    <link rel="stylesheet" href="{% static 'css/enterpage.css' %}">
 </head>
 <body>
     <body>
@@ -24,11 +25,11 @@
                 </div>
     <div class="buttons">
 
-        <a href="login.html" class="button" target="_parent">
+        <a href="accounts/login" class="button" target="_parent">
             <span class="actual-text">&nbsp;Login &nbsp;</span>
             <span class="hover-text" aria-hidden="true">&nbsp;Login&nbsp;</span>
     </a>
-    <a href="login.html" class="button" target="_parent">
+    <a href="accounts/signup" class="button" target="_parent">
         <span class="actual-text">&nbsp;Sign Up &nbsp;</span>
         <span class="hover-text" aria-hidden="true">&nbsp;Sign Up&nbsp;</span>
 </a>

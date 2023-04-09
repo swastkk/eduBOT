@@ -54,3 +54,15 @@ translated = gpt_3.translate(text, lang)
 
 print(translated)
 
+<<<<<<< HEAD
+=======
+print(summary)
+
+
+question = input("question dedo : ")
+context = summary 
+qna_answer = gpt_3.qna(question , summary)
+
+
+# print(qna_answer)
+>>>>>>> 5cfd3982ffd865c01b5fe575f14ed08b277658a3

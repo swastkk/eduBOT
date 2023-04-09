@@ -3,17 +3,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>URL Submission Form</title>
+    <title>Learn IT | eduBOT</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/learnit.css' %}">
   </head>
   <script src="{% static 'js/learnit.js' %}"></script>
   <body>
+      <nav>
+        <div class="logo">
+        <a href='/'><img src="{% static 'logo.webp' %}" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="../bookbuddy" target: "_blank";>Book Buddy</a></li>
+          <li><a href="../youtubeplus">YouTube plus</a></li>
+          <li><a href="">Learn it</a></li>
+          <li><a href="#">Profile</a></li>
+        </ul>
+      </nav>
+       <h2 style="font-size: 50px; padding-top: 30px"class="title">Learn it</h2>
+
     <div class="form-container">
       <form method='post'>
                     {% csrf_token %}
-      <!--   <label for="url-input">Enter Prompt to learn anything</label> -->
                {{form}}
-      <!--   <input type="text" id="url-input" name="url-input"> -->
         <input type="submit" value="Submit">
       </form>
                {% block desc %}
@@ -25,7 +36,6 @@
                {% block urls %}
                
                {% endblock urls %}
-    </div>
 
           <div>
    

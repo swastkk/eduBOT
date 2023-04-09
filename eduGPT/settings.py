@@ -182,3 +182,5 @@ JAZZMIN_SETTINGS = {
 }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
