@@ -1,22 +1,24 @@
 
-<body>
+<!-- <body>
      <form method="POST" class="post-form" enctype="multipart/form-data">
           {% csrf_token %}
           {{ form.as_p }}
           <button type="submit" class="save btn btn-default">Save</button>
      </form>
 </body>
-<!-- 
-
-     <!DOCTYPE html>
+-->
+{% load static %} 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Buddy</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="{% static 'css/bookbuddy.css' %}">
 </head>
+  <script src="{% static 'js/bookbuddy.js' %}"></script>
+
 <body>
     <body>
         <header>
@@ -86,4 +88,4 @@
       
   </body>
 </html>
- -->
+
