@@ -7,8 +7,6 @@ import whisper
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 import os
-# from pytube import YouTube
-import pytube
 from gpt import GPT_3
 from .forms import YtForm
 
