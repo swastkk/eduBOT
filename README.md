@@ -5,9 +5,6 @@
 
 ## One stop solution to all learning problems.
 
-![WhatsApp Image 2023-04-08 at 3 50 45 PM](https://user-images.githubusercontent.com/81990329/230716118-6da18671-9cb4-48bb-a86b-f3e5e147da06.jpeg)
-
-
 ## Tech Stacks:
  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">  <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"> ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black) ![NLP](https://img.shields.io/badge/nlp-000?style=for-the-badge&logo=ghost&logoColor=%23F7DF1E) <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
 
