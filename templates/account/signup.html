@@ -6,11 +6,11 @@
 
 {% block content %}
 <section>
-  <div class="login-dark-signup">
+  <div class="">
     <div class="row">
 
      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-      <div class="col-md-12 col-centered">
+      <div class="">
         <h1 class="mt-5 mb-3">{% trans "Sign Up" %}</h1>
           {% csrf_token %}
           {{ form.as_p }}
