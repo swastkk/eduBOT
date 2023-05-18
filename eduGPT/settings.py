@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import django.conf.global_settings
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -182,5 +184,4 @@ JAZZMIN_SETTINGS = {
 }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-
+LOGIN_REDIRECT_URL= "/"
