@@ -152,7 +152,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DJANGO_ICONS = {
     "ICONS": {
-        "icon": {"name": "fa-solid fa-lock fa-beat fa-lg"},
+        "logout": {"name": "fa fa-sign-out"},
     },
 }
 

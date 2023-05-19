@@ -1,7 +1,20 @@
-
+{% load static %}
 <head>
      <title>BookBuddy</title>
 </head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/bookbuddy.css' %}">
+
+<nav>
+     <div class="logo">
+     <a href='/'><img src="{% static 'logo.webp' %}" alt="Logo"></a>
+     </div>
+     <ul class="nav-links">
+       <li><a href="../youtubeplus">YouTube plus</a></li>
+       <li><a href="../learnit">Learn it</a></li>
+       <li><a href="../accounts/logout">Logout</a></li>
+     </ul>
+</nav>
+    <h2 style="font-size: 50px; padding-top: 80px"class="title">BookBuddy</h2>
      <form method="POST" class="post-form" enctype="multipart/form-data">
           {% csrf_token %}
           {{form}}

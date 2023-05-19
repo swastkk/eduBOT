@@ -161,6 +161,11 @@ p
 	line-height: 1.3em;
 	margin: 0 0 1.5m 0;
 }
+nav ul li a img{
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
 
 .lead {
   font-weight:100;
