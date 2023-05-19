@@ -14,17 +14,25 @@
        <li><a href="../accounts/logout">Logout</a></li>
      </ul>
 </nav>
-    <h2 style="font-size: 50px; padding-top: 80px"class="title">BookBuddy</h2>
-     <form method="POST" class="post-form" enctype="multipart/form-data">
+    <h2 style="font-size: 50px; padding-top: 80px; text-align: center;"class="title">BookBuddy</h2>
+<div class="form-container"> 
+    <form method="POST" class="post-form" enctype="multipart/form-data">
           {% csrf_token %}
           {{form}}
-          <button type="submit" class="save btn btn-default">Submit</button>
+          <button  type="submit" class="primary-action">Submit</button>
      </form>
+</div>
      <br>
-     <hr>
-     {% block audio %}
+     <div class="container">
+          {% block audio %}
 
-     {% endblock audio %}
+          {% endblock audio %}
+          <hr>
+     </div>
+     <div class="container">
+          {% block summary %}
+          {% endblock summary %}
 
-     {% block summary %}
-     {% endblock summary %}
+     </div>
+
+     
