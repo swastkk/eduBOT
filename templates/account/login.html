@@ -9,14 +9,14 @@
 <section>
   <div class="login-container">
     <div class="login-form">
-      <h1>{% trans "Sign in" %}</h1>
+      <h1>{% trans "LOG IN" %}</h1>
 
       {% get_providers as socialaccount_providers %}
 
       {% if socialaccount_providers %}
         <p class="login-info">{% blocktrans with site.name as site_name %}Please sign in with one
         of your existing third-party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-        for a {{ site_name }} account and sign in below.{% endblocktrans %}</p>
+        for a account and sign in below.{% endblocktrans %}</p>
 
         <div class="social-accounts">
           <ul class="provider-list">
@@ -39,7 +39,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="primary-action" type="submit">{% trans "Sign In" %}</button>
+        <button class="primary-action" type="submit">{% trans "LOG IN" %}</button>
         <br>
         <a class="secondary-action" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
       </form>

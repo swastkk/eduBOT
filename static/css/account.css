@@ -1,3 +1,8 @@
+body{
+  background-color: #22272e;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #f0f6fc;
+}
 .login-container {
   display: flex;
   justify-content: center;
@@ -55,7 +60,7 @@
 
 .login input[type="text"],
 .login input[type="password"] {
-  width: 100%;
+  width: 376px;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -68,7 +73,7 @@
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 3px; 
   cursor: pointer;
 }
 
@@ -82,3 +87,15 @@
   color: #007bff;
   text-decoration: none;
 }
+a{
+  color: #f0f6fc  ;
+}
+
+.signupform p{
+  display: flex;
+  justify-content: space-between;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #fff;
+}
+
