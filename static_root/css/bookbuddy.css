@@ -1,9 +1,8 @@
  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
-  background: #000;
+  background: #22272e;
   color: white;
-  width: 95%;
- padding: 0;
+  padding: 0;
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -169,13 +168,13 @@ header {
 
 /* pdf section */
 
-.form-container {
+/* .form-container {
 	width: 500px;
 	height: 100%;
 	display: flex;
    	justify-content: center;
 	align-items: center;
-}
+} */
 
 .drag-file-area .upload-icon {
 	font-size: 50px;
@@ -392,7 +391,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #2d333b;
   color: #fff;
 }
 
@@ -411,12 +410,44 @@ nav {
 .nav-links li {
   margin-left: 20px;
 }
-
+.container{
+  width: 800px;
+  margin: 0 auto;
+}
 .nav-links a {
   color: #fff;
   text-decoration: none;
 }
 .nav-links a:hover {
   color: #ccc;
+}
+.primary-action {
+  width: 25%;
+  margin-top: 10px;
+  margin-left: 176px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inherit;
+}
+
+.primary-action:hover {
+  background-color: #0069d9;
+}
+.form-container {
+  width: 800px;
+  height: 15vh;
+  color: #fff;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #2d333b;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
 
