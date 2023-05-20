@@ -119,7 +119,7 @@ animation: animate 6s linear infinite;
 
 .twitch:hover .one {
 border: none;
-background:rgb(143, 142, 143);;
+background:#347d39;
 }
 
 .square .two {
@@ -136,7 +136,7 @@ animation: animate 6s linear infinite;
 
 .twitch:hover .two {
 border: none;
-background: rgb(126, 125, 127);;
+background:#1f6feb;
 
 }
 
@@ -156,7 +156,7 @@ animation: animate2 10s linear infinite;
 }
 .twitch:hover .three {
 border: none;
-background:rgb(137, 135, 139);;
+background:#ec8e2c;
 }
 
 .circle {

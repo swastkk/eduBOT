@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_icons',
-
+    'static_precompiler',   
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -185,3 +185,14 @@ JAZZMIN_SETTINGS = {
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL= "/"
+
+STATIC_PRECOMPILER_COMPILERS = (
+    (
+        "static_precompiler.compilers.LESS",
+        {
+            "executable": "/usr/bin/lessc",
+            "sourcemap_enabled": True,
+            "global_vars": {"link-color": "red"},
+        },
+    ),
+)
