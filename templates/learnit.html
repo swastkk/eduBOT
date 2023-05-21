@@ -6,6 +6,8 @@
     <title>Learn IT | eduBOT</title>
   </head>
   <script src="{% static 'js/learnit.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/preloader.css' %}">
+
   <style>
     *{
   color:#fff;
@@ -146,6 +148,9 @@ nav {
 
   </style>
   <body>
+
+    {% include 'preloader.html' %}
+
       <nav>
         <div class="logo">
         <a href='/'><img src="{% static 'logo.webp' %}" alt="Logo"></a>
@@ -182,6 +187,24 @@ nav {
                
                {% endblock quiz %}
     </div>
-
+    <script>
+      // Show the preloader
+      function showPreloader() {
+        document.getElementById('preloader').style.display = 'flex';
+      }
+  
+      // Hide the preloader
+      function hidePreloader() {
+        document.getElementById('preloader').style.display = 'none';
+      }
+  
+      // Add an event listener to show the preloader when a form is submitted
+      document.addEventListener('submit', function(event) {
+        showPreloader();
+      });
+  
+      // Add an event listener to hide the preloader once the page has finished loading
+      window.addEventListener('load', hidePreloader);
+    </script>
   </body>
 </html>
