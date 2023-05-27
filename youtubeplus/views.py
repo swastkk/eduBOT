@@ -56,7 +56,7 @@ def youtubeplus(request):
             print(url)
             audio, text = urlToText(url)
             summary = ""
-            print(" summary is bein calculated")
+            print(" Summary is being calculated")
             parser = PlaintextParser(text, Tokenizer('english'))
             summarizer_1 = LuhnSummarizer()
             summary_1 = summarizer_1(parser.document, lines)

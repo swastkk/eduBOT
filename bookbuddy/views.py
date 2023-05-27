@@ -16,15 +16,13 @@ def bookbuddy(request):
             print(len(request.FILES))
             file = request.FILES['file']
             val, text = getText(file, "")
-            print("summary")
+            print("The summary generation hs started...")
             parser = PlaintextParser(text, Tokenizer('english'))
             summarizer_1 = LuhnSummarizer()
             summary_1 = summarizer_1(parser.document, 10)
             output = ""
-            print('thhis')
             for sentence in summary_1:
                 output += str(sentence)
-            print('thhis is')
             file = text_to_audio(output)
             ctx = {
                 'file': file,
