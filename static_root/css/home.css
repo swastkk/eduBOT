@@ -14,9 +14,7 @@
     
   }
   
-  .container{
-    padding: 2rem 0rem;
-  }
+
 
  /* navbar */
  
@@ -185,12 +183,7 @@ picture {
     min-width: min-content;
   }
   
-  .container {
-    display: flex;
-    padding: 3rem 3rem;
-    justify-content: center;
-    max-width: 760px;
-  }
+
    .aboutFeature {
     flex: 0 1 760px;
     padding: 3rem 3rem;
@@ -392,11 +385,6 @@ picture {
       font-size: 16px;
     }
   
-    .container {
-      width: 100%;
-      padding-left: 6vw;
-      padding-right: 6vw;
-    }
   
     .miniReview {
       flex-grow: 1;
